@@ -1,20 +1,16 @@
 FROM kalilinux/kali-linux-docker
 MAINTAINER nahidul kibria <nahidupa@gmail.com>
 #python-httplib2 fimap dependency
-#libswitch-perl  dotdotpwn dependency
+#libswitch-perl libssl-dev dotdotpwn dependency
 
 RUN apt-get update\
   && apt-get install --assume-yes nmap netcat\
   sqlmap whatweb wpscan beef fimap dotdotpwn recon-ng\ 
   python-httplib2\  
   libswitch-perl\  
+  libssl-dev\
   && apt-get clean
   
 //Can't locate LWP/UserAgent.pm in @INC ... dotdotpwn
 WORKDIR /tmp
-RUN wget http://www.cpan.org/modules/by-module/LWP/libwww-perl-6.06.tar.gz
-RUN tar xvzf libwww-perl-6.06.tar.gz
-WORKDIR /tmp/libwww-perl-6.06
-RUN perl Makefile.PL
-RUN make
-RUN make install
+cpan install HTTP::Request Net::FTP TFTP Time::HiRes Socket IO::Socket Getopt::Std Switch IO::Socket::SSL
