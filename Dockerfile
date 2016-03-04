@@ -1,6 +1,6 @@
 FROM kalilinux/kali-linux-docker
 MAINTAINER nahidul kibria <nahidupa@gmail.com>
-
+ENV TERM xterm
 #python-httplib2 fimap dependency
 #libswitch-perl  dotdotpwn dependency
 
