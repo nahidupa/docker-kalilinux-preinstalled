@@ -13,6 +13,6 @@ RUN apt-get update\
   
 #Can't locate LWP/UserAgent.pm in @INC ... dotdotpwn
 WORKDIR /tmp
-RUN cpan install HTTP::Request Net::FTP TFTP Time::HiRes Socket IO::Socket Getopt::Std Switch IO::Socket::SSL
+RUN cpan install Bundle::LWP HTTP::Request Net::FTP TFTP Time::HiRes Socket IO::Socket Getopt::Std Switch IO::Socket::SSL
 
 EXPOSE 8000 8001 8002 8003 8004 8005
