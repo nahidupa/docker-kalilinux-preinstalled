@@ -11,7 +11,7 @@ RUN apt-get update\
   libssl-dev\
   && apt-get clean
   
-//Can't locate LWP/UserAgent.pm in @INC ... dotdotpwn
+#Can't locate LWP/UserAgent.pm in @INC ... dotdotpwn
 WORKDIR /tmp
 cpan install HTTP::Request Net::FTP TFTP Time::HiRes Socket IO::Socket Getopt::Std Switch IO::Socket::SSL
 
