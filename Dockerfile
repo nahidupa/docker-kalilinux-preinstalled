@@ -12,9 +12,9 @@ RUN apt-get update\
   
 //Can't locate LWP/UserAgent.pm in @INC ... dotdotpwn
 WORKDIR /tmp
-RUN wget http://www.cpan.org/modules/by-module/LWP/libwww-perl-5.837.tar.gz
-RUN tar xvzf libwww-perl-5.837.tar.gz
-WORKDIR /tmp/libwww-perl-5.837
+RUN wget http://www.cpan.org/modules/by-module/LWP/libwww-perl-6.06.tar.gz
+RUN tar xvzf libwww-perl-6.06.tar.gz
+WORKDIR /tmp/libwww-perl-6.06
 RUN perl Makefile.PL
 RUN make
 RUN make install
