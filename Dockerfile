@@ -9,3 +9,12 @@ RUN apt-get update\
   python-httplib2\  
   libswitch-perl\  
   && apt-get clean
+  
+//Can't locate LWP/UserAgent.pm in @INC ... dotdotpwn
+WORKDIR /tmp
+RUN wget http://www.cpan.org/modules/by-module/LWP/libwww-perl-5.837.tar.gz
+RUN tar xvzf libwww-perl-5.837.tar.gz
+WORKDIR /tmp/libwww-perl-5.837
+RUN perl Makefile.PL
+RUN make
+RUN make install
