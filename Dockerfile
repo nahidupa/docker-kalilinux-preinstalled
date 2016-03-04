@@ -6,7 +6,7 @@ MAINTAINER nahidul kibria <nahidupa@gmail.com>
 
 RUN apt-get update\
   && apt-get install --assume-yes nmap netcat\
-  sqlmap whatweb wpscan beef fimap dotdotpwn recon-ng\ 
+  sqlmap whatweb wpscan beef fimap dotdotpwn recon-ng nano sqlmap\ 
   python-httplib2\  
   libswitch-perl\  
   && apt-get clean
